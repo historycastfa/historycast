@@ -15,10 +15,10 @@ async function loadEpisodes() {
 
         document.querySelector(".episode p").innerHTML =
             latest.description.substring(0, 300) + "...";
-
+document.querySelector("#player").src = latest.enclosure;
     } catch (error) {
         console.log("RSS Error:", error);
     }
 }
-
+document.querySelector("#player").src = latest.enclosure;
 loadEpisodes();
