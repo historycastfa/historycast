@@ -21,8 +21,6 @@ async function loadEpisodes() {
                 latest.description.substring(0, 300) + "...";
             document.querySelector(".episode h3").innerHTML = latest.title;
 
-document.querySelector(".episode p").innerHTML =
-    latest.description.substring(0, 300) + "...";
     } catch (error) {
         console.log("RSS Error:", error);
     }
