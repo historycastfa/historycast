@@ -14,8 +14,8 @@ async function loadEpisodes() {
 
             const latest = episodes.sort((a, b) => {
     return new Date(b.pubDate) - new Date(a.pubDate);
-})[0];
-            document.querySelector(".episode h3").innerHTML = latest.title;
+})[0];document.querySelector(".episode h3").innerHTML =
+"قسمت ۱: " + latest.title;
 
             document.querySelector(".episode p").innerHTML =
                 latest.description.substring(0, 300) + "...";
