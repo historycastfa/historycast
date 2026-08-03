@@ -16,6 +16,8 @@ async function loadEpisodes() {
         document.querySelector(".episode p").innerHTML =
             latest.description.substring(0, 300) + "...";
 document.getElementById("player").src = latest.enclosure.link;
+        console.log(latest.enclosure.link);
+console.log(document.getElementById("player").src);
         document.getElementById("player").load();
     } catch (error) {
         console.log("RSS Error:", error);
