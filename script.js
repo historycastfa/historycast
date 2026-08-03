@@ -8,14 +8,16 @@ async function loadEpisodes() {
 
         const data = await response.json();
 
-        const latest = data.items[0];
+        const episodes = data.items;
 
-        const title = document.querySelector(".episode h3");
-        const description = document.querySelector(".episode p");
+        if (episodes && episodes.length > 0) {
 
-        if (latest) {
-            title.innerHTML = latest.title;
-            description.innerHTML = latest.description;
+            const latest = episodes[0];
+
+            document.querySelector(".episode h3").innerHTML = latest.title;
+
+            document.querySelector(".episode p").innerHTML =
+                latest.description.substring(0, 300) + "...";
         }
 
     } catch (error) {
