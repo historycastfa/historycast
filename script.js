@@ -12,13 +12,14 @@ async function loadEpisodes() {
         
         document.querySelector(".episode h3").innerHTML =
             "قسمت ۱: " + latest.title;
+document.querySelector(".episode p").textContent =
+    latest.description.replace(/<[^>]*>/g, "").substring(0, 300) + "...";
 
-        document.querySelector(".episode p").innerHTML =
-            latest.description.substring(0, 300) + "...";
-document.getElementById("player").src = latest.enclosure.link;
-        console.log(latest.enclosure.link);
-console.log(document.getElementById("player").src);
-        document.getElementById("player").load();
+document.getElementById("player").src =
+"https://content.rss.com/episodes/396656/3037946/historycastfa/2026_07_31_18_21_48_3f1e56bd-a550-4451-b180-c09b37d2ebe6.mp3";
+
+document.getElementById("player").load();
+        
     } catch (error) {
         console.log("RSS Error:", error);
     }
