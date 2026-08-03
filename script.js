@@ -9,7 +9,7 @@ async function loadEpisodes() {
         const data = await response.json();
 
         const latest = data.items[0];
-
+        alert(JSON.stringify(latest));
         document.querySelector(".episode h3").innerHTML =
             "قسمت ۱: " + latest.title;
 
