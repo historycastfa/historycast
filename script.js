@@ -8,18 +8,13 @@ async function loadEpisodes() {
 
         const data = await response.json();
 
-        const episodes = data.items;
+        const latest = data.items[0];
 
-        if (episodes && episodes.length > 0) {
+        document.querySelector(".episode h3").innerHTML =
+            "قسمت ۱: " + latest.title;
 
-            const latest = episodes.sort((a, b) => {
-    return new Date(b.pubDate) - new Date(a.pubDate);
-})[0];document.querySelector(".episode h3").innerHTML =
-"قسمت ۱: " + latest.title;
-
-            document.querySelector(".episode p").innerHTML =
-                latest.description.substring(0, 300) + "...";
-            document.querySelector(".episode h3").innerHTML = latest.title;
+        document.querySelector(".episode p").innerHTML =
+            latest.description.substring(0, 300) + "...";
 
     } catch (error) {
         console.log("RSS Error:", error);
