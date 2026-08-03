@@ -9,13 +9,14 @@ async function loadEpisodes() {
         const data = await response.json();
 
         const latest = data.items[0];
-        alert(JSON.stringify(latest));
+        
         document.querySelector(".episode h3").innerHTML =
             "قسمت ۱: " + latest.title;
 
         document.querySelector(".episode p").innerHTML =
             latest.description.substring(0, 300) + "...";
-
+document.getElementById("player").src = latest.enclosure.link;
+        document.getElementById("player").load();
     } catch (error) {
         console.log("RSS Error:", error);
     }
