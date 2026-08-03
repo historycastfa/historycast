@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background: #0b0b0b;
+    color: #f1f1f1;
+    line-height: 1.8;
+}
+
+header {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.75),
+            rgba(0,0,0,0.9)
+        );
+    padding: 40px;
+}
+
+header h1 {
+    font-size: 4rem;
+    color: #c9a227;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.8rem;
+    margin-top: 15px;
+    color: #ddd;
+}
+
+
+section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+}
+
+
+.intro,
+.latest {
+    background: #161616;
+    border-radius: 20px;
+    border: 1px solid #333;
+}
+
+
+h2 {
+    color: #c9a227;
+    margin-bottom: 20px;
+}
+
+
+.episode {
+    background: #101010;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+
+button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #c9a227;
+    color: #111;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    opacity: 0.85;
+}
+
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #888;
+}
+
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.3rem;
+    }
+
+    section {
+        margin: 20px;
+        padding: 20px;
+    }
+}
