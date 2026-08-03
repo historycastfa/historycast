@@ -12,7 +12,7 @@ async function loadEpisodes() {
 
         if (episodes && episodes.length > 0) {
 
-            const latest = episodes[0];
+            const latest = episodes[episodes.length - 1];
 
             document.querySelector(".episode h3").innerHTML = latest.title;
 
