@@ -106,3 +106,79 @@ footer {
         padding: 20px;
     }
 }
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background: linear-gradient(180deg,#090909,#141414);
+}
+
+header{
+    border-bottom:1px solid #2b2b2b;
+}
+
+.intro,
+.latest{
+    box-shadow:0 10px 35px rgba(0,0,0,.45);
+    transition:.3s;
+}
+
+.intro:hover,
+.latest:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 45px rgba(0,0,0,.6);
+}
+
+.episode{
+    transition:.3s;
+}
+
+.episode:hover{
+    transform:scale(1.01);
+}
+
+audio{
+    width:100%;
+    margin-top:20px;
+}
+
+#episodes-list{
+    margin-top:30px;
+}
+
+.episode-card{
+    background:#161616;
+    border:1px solid #2d2d2d;
+    border-radius:18px;
+    padding:20px;
+    margin-bottom:20px;
+    transition:.3s;
+}
+
+.episode-card:hover{
+    border-color:#c9a227;
+    transform:translateY(-5px);
+}
+
+.episode-card h3{
+    color:#c9a227;
+    margin-bottom:10px;
+}
+
+.episode-card p{
+    color:#cfcfcf;
+}
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#c9a227;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
